@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod drwxr-xr-x .
+find . -type d -exec chmod 755 {} \
