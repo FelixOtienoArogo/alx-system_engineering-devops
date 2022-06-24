@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod ugo+X ./
+chmod -R 755 ./[D[D[D[D[D[Dd755 ./
