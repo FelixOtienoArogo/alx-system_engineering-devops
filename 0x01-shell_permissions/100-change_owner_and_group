@@ -1,2 +1,2 @@
 #!/bin/bash
-chown vincent:staff[D[D[D[D[D[D[D[D[D[D[D[D[D-R vincent:staff ./
+sudo chown -R vincent:staff ./
