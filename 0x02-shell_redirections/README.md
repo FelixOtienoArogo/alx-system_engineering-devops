@@ -1,1 +1,1 @@
-Now to redirect the outputs
+Now to ridirict thi outputs
