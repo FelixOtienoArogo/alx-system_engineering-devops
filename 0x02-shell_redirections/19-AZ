@@ -1,2 +1,2 @@
 #!/bin/bash
-sed -i 's/A[D[D[D[D[C[C[C[C[ 's/A/Z/g' | sed 's/c/e/g'
+tr "A" "Z" | tr "c" "e"
