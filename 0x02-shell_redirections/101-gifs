@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a | find -type f -name "*.gif" | rev | cut -d "/" -f 1 | cut -d '.' -f 2 |rev|LC_ALL=C sort -f[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[C[C[C[C[C[C[C[C[C[C[C[C[C  [D[D- |rev|LC_ALL=C sort
+ls -a | find -type f -name "*.gif" | rev | cut -d "/" -f 1 | cut -d '.' -f 2 |rev|LC_ALL=C sort -f[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crev|LC_ALL=C sort -f
