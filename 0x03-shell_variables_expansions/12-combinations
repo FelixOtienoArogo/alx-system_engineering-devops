@@ -1,0 +1,2 @@
+#!/bin/bash
+ printf "%s \n" {a..z}.{a..z}|tr -d '.'|grep -v 'oo'[D[D[D[D[D[D[D[D[D[C[C[C[C[C[C[C[C[C[C[D
