@@ -1,1 +1,2 @@
-echo 'obase=$bestchol; $WATER + $STIR'|bc[D[D[D[D[D[D[D[D[[C[C[C[C[C[C+$STIR'|bc
+#!/bin/bash
+echo 'obase=$bestchol; $WATER + $STIR'|+$STIR'|bc
