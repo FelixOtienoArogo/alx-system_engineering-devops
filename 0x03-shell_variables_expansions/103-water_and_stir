@@ -1,2 +1,2 @@
 #!/bin/bash
-echo 'obase=$bestchol; $WATER + $STIR'|+$STIR'|bc
+print "%$bestchol\n" $(($WATER+$STIR))
