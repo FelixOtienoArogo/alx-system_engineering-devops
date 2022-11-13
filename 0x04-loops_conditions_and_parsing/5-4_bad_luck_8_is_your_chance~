@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times
+
+a="0"
+while [ $a -le 9 ]
+do
+    if [ $a -eq 4 ]
+    then
+	echo "bad luck"
+    elif [ $a -eq 8 ]
+    then
+	echo "good luck"
+    else
+	echo "Best School"
+    fi	 
+    a=$((a+1)) 
+done
