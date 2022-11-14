@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#new
+
+function leave() {
+    rm /var/run/myscript.pid
+    exit
+}
+
+trap "echo I hate the kill command;leave" SIGTERM
+trap "echo Y U no love me?!;leave" SIGINT
+
+echo $$ >> /var/run/myscript.pid
+while true
+do
+    echo "To infinity and beyond"
+done
