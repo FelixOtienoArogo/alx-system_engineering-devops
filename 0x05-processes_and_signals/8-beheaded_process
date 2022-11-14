@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#kill me now
+
+kill -9 "$(pgrep -f highlander)"
