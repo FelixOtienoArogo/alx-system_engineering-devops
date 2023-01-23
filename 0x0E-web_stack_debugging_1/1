@@ -2,44 +2,39 @@ Ign:1 cdrom://Ubuntu 20.04.2.0 LTS _Focal Fossa_ - Release amd64 (20210209.1) fo
 Err:2 cdrom://Ubuntu 20.04.2.0 LTS _Focal Fossa_ - Release amd64 (20210209.1) focal Release
   Please use apt-cdrom to make this CD-ROM recognized by APT. apt-get update cannot be used to add new CD-ROMs
 Hit:3 http://dl.google.com/linux/chrome/deb stable InRelease
-Get:4 http://security.ubuntu.com/ubuntu xenial-security InRelease [99.8 kB]
-Get:5 https://cli.github.com/packages focal InRelease [3,915 B]
-Err:5 https://cli.github.com/packages focal InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu focal InRelease
+Get:5 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Hit:6 http://ppa.launchpad.net/deadsnakes/ppa/ubuntu focal InRelease
+Get:7 https://cli.github.com/packages focal InRelease [3,915 B]
+Err:7 https://cli.github.com/packages focal InRelease
   The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 23F3D4EA75716059
-Get:6 https://cli.github.com/packages stable InRelease [3,917 B]
-Err:6 https://cli.github.com/packages stable InRelease
+Get:8 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:9 https://cli.github.com/packages stable InRelease [3,917 B]
+Err:9 https://cli.github.com/packages stable InRelease
   The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 23F3D4EA75716059
-Hit:7 http://ppa.launchpad.net/deadsnakes/ppa/ubuntu focal InRelease
-Hit:8 http://archive.ubuntu.com/ubuntu focal InRelease
-Get:9 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
-Ign:10 http://ppa.launchpad.net/vbernat/haproxy-1.7/ubuntu focal InRelease
-Err:11 http://ppa.launchpad.net/vbernat/haproxy-1.7/ubuntu focal Release
+Get:10 http://archive.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [2,336 kB]
+Get:12 http://security.ubuntu.com/ubuntu xenial-security InRelease [99.8 kB]
+Get:13 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1,017 kB]
+Ign:14 http://ppa.launchpad.net/vbernat/haproxy-1.7/ubuntu focal InRelease
+Err:15 http://ppa.launchpad.net/vbernat/haproxy-1.7/ubuntu focal Release
   404  Not Found [IP: 185.125.190.52 80]
-Get:12 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
-Get:13 http://archive.ubuntu.com/ubuntu focal-security InRelease [114 kB]
-Get:14 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [16.2 kB]
 Reading package lists...
 E: The repository 'cdrom://Ubuntu 20.04.2.0 LTS _Focal Fossa_ - Release amd64 (20210209.1) focal Release' does not have a Release file.
 W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: https://cli.github.com/packages focal InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 23F3D4EA75716059
 W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: https://cli.github.com/packages stable InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 23F3D4EA75716059
 E: The repository 'http://ppa.launchpad.net/vbernat/haproxy-1.7/ubuntu focal Release' does not have a Release file.
-Reading package lists...
-Building dependency tree...
-Reading state information...
-curl is already the newest version (7.68.0-1ubuntu2.15).
-The following packages were automatically installed and are no longer required:
-  gsfonts imagemagick-6-common libfwupdplugin1 liblqr-1-0 libm17n-0
-  libmagickcore-6.q16-6 libmagickwand-6.q16-6 libotf0 libxmlb1 m17n-db xaw3dg
-Use 'sudo apt autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 106 not upgraded.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
 Reading package lists...
 Building dependency tree...
 Reading state information...
 nginx is already the newest version (1.18.0-0ubuntu1.4).
+nginx-common is already the newest version (1.18.0-0ubuntu1.4).
+nginx-core is already the newest version (1.18.0-0ubuntu1.4).
 The following packages were automatically installed and are no longer required:
   gsfonts imagemagick-6-common libfwupdplugin1 liblqr-1-0 libm17n-0
   libmagickcore-6.q16-6 libmagickwand-6.q16-6 libotf0 libxmlb1 m17n-db xaw3dg
 Use 'sudo apt autoremove' to remove them.
 0 upgraded, 0 newly installed, 0 to remove and 106 not upgraded.
-Job for nginx.service failed because the control process exited with error code.
-See "systemctl status nginx.service" and "journalctl -xe" for details.
