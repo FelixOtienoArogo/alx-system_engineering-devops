@@ -2,7 +2,6 @@
 # change nginx to listen on port 80 and kill it
 sudo apt-get update
 sudo apt-get -y install curl
-sudo apt-get -y install nginx
+sudo apt install nginx nginx-common nginx-core
 sudo sed -i "s/8080/80/g" /etc/nginx/sites-enabled/default
-sudo sed -i "/listen 80 default_server/a \\\treturn 200;" /etc/nginx/sites-enabled/default
 sudo service nginx restart 
