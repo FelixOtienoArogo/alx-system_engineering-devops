@@ -3,4 +3,5 @@
 apt-get update
 apt-get -y install curl
 sed -i "s/8080/80/g" /etc/nginx/sites-enabled/default
+sudo sed -i "/listen 80 default_server/a \\\treturn 200;" /etc/nginx/sites-enabled/default
 sudo service nginx restart
