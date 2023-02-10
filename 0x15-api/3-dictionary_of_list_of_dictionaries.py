@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-'''
-A script to export data in the JSON format
-'''
+"""A script to export data in the JSON format."""
 import json
 import requests
 
