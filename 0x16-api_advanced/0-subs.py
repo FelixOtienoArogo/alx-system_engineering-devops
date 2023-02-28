@@ -8,9 +8,9 @@ def number_of_subscribers(subreddit):
     """
     Args: subreddit-subreddit name.
 
-    Returns:number of subscribers to the subreddit,or 0 if subreddit requested is invalid
+    Returns:number of subscribers to the subreddit
 
-    """    
+    """
     headers = {'User-Agent': 'Fao'}
     url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
     response = requests.get(url, headers=headers, allow_redirects=False)
