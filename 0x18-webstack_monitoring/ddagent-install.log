@@ -1,0 +1,176 @@
+[34m
+* Datadog Agent 7 install script v1.15.0
+[0m
+[34m
+* Installing apt-transport-https, curl and gnupg
+[0m
+Ign:1 cdrom://Ubuntu 20.04.2.0 LTS _Focal Fossa_ - Release amd64 (20210209.1) focal InRelease
+Err:2 cdrom://Ubuntu 20.04.2.0 LTS _Focal Fossa_ - Release amd64 (20210209.1) focal Release
+  Please use apt-cdrom to make this CD-ROM recognized by APT. apt-get update cannot be used to add new CD-ROMs
+Ign:3 https://apt.datadoghq.com stable InRelease
+Hit:4 https://apt.datadoghq.com stable Release
+Get:6 https://cli.github.com/packages focal InRelease [3,915 B]
+Err:6 https://cli.github.com/packages focal InRelease
+  The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 23F3D4EA75716059
+Get:7 https://cli.github.com/packages stable InRelease [3,917 B]
+Err:7 https://cli.github.com/packages stable InRelease
+  The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 23F3D4EA75716059
+Hit:8 http://dl.google.com/linux/chrome/deb stable InRelease
+Hit:9 http://archive.ubuntu.com/ubuntu focal InRelease
+Get:10 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Hit:13 http://ppa.launchpad.net/deadsnakes/ppa/ubuntu focal InRelease
+Ign:14 http://ppa.launchpad.net/vbernat/haproxy-1.7/ubuntu focal InRelease
+Get:15 http://archive.ubuntu.com/ubuntu focal-updates/universe Sources [307 kB]
+Err:16 http://ppa.launchpad.net/vbernat/haproxy-1.7/ubuntu focal Release
+  404  Not Found [IP: 185.125.190.52 80]
+Err:17 http://security.ubuntu.com/ubuntu xenial-security InRelease
+  Could not resolve 'security.ubuntu.com'
+Get:18 http://archive.ubuntu.com/ubuntu focal-updates/restricted Sources [49.1 kB]
+Get:19 http://archive.ubuntu.com/ubuntu focal-updates/main Sources [545 kB]
+Get:20 http://archive.ubuntu.com/ubuntu focal-updates/multiverse Sources [22.0 kB]
+Get:21 http://archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [793 kB]
+Get:22 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [2,418 kB]
+Get:23 http://archive.ubuntu.com/ubuntu focal-updates/main Translation-en [413 kB]
+Get:24 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [275 kB]
+Ign:25 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata
+Get:26 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [1,663 kB]
+Get:27 http://archive.ubuntu.com/ubuntu focal-updates/restricted i386 Packages [30.6 kB]
+Get:28 http://archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [234 kB]
+Get:29 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 c-n-f Metadata [620 B]
+Get:30 http://archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages [716 kB]
+Get:31 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1,033 kB]
+Get:32 http://archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [241 kB]
+Ign:33 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata
+Get:34 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [25.2 kB]
+Ign:35 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata
+Ign:36 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 c-n-f Metadata
+Get:37 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 DEP-11 Metadata [7,992 B]
+Get:38 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [30.5 kB]
+Get:39 http://archive.ubuntu.com/ubuntu focal-security/main Sources [270 kB]
+Get:40 http://archive.ubuntu.com/ubuntu focal-security/universe Sources [157 kB]
+Get:41 http://archive.ubuntu.com/ubuntu focal-security/main amd64 Packages [2,007 kB]
+Get:42 http://archive.ubuntu.com/ubuntu focal-security/main i386 Packages [559 kB]
+Ign:43 http://archive.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata
+Get:44 http://archive.ubuntu.com/ubuntu focal-security/universe i386 Packages [586 kB]
+Get:45 http://archive.ubuntu.com/ubuntu focal-security/universe amd64 Packages [808 kB]
+Get:46 http://archive.ubuntu.com/ubuntu focal-security/universe Translation-en [159 kB]
+Get:47 http://archive.ubuntu.com/ubuntu focal-security/universe amd64 DEP-11 Metadata [95.1 kB]
+Get:48 http://archive.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [17.2 kB]
+Get:49 http://archive.ubuntu.com/ubuntu focal-security/multiverse amd64 DEP-11 Metadata [940 B]
+Get:25 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [16.3 kB]
+Get:33 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [409 kB]
+Get:35 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [944 B]
+Err:35 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata
+  File has unexpected size (940 != 944). Mirror sync in progress? [IP: 185.125.190.39 80]
+  Hashes of expected file:
+   - Filesize:944 [weak]
+   - SHA256:6aaab027da4517aa5e1c549322305edc12b6d298aee4f734bc4f364a65a0d045
+   - SHA1:8d34df160624ecf1cada167e25864dd5e3582cbd [weak]
+   - MD5Sum:6eaca8c851413e6b5996c61342f34244 [weak]
+  Release file created at: Thu, 02 Mar 2023 14:23:17 +0000
+Get:36 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 c-n-f Metadata [592 B]
+Err:36 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 c-n-f Metadata
+  
+Get:43 http://archive.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [59.9 kB]
+Err:43 http://archive.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata
+  Hash Sum mismatch
+  Hashes of expected file:
+   - Filesize:59876 [weak]
+   - SHA256:e0218435815af6bfee85025eef0c4202eab9eac8553f341efe70e184b9f16366
+   - SHA1:d964d2035cdf72e7f09e69c4ff95ecf80b98b7d1 [weak]
+   - MD5Sum:71381743723a84a45a32dc51b64c55ca [weak]
+  Hashes of received file:
+   - SHA256:cfae1017f3fef11b94f1a4ee9c8f4ec4814f37a654b2202e28d7798b5c100297
+   - SHA1:ad06e94aa79e6e58539a6e0ef7cdfc0b90dcc603 [weak]
+   - MD5Sum:0d9b87cf4753066d43dd95c7bcdcda31 [weak]
+   - Filesize:59876 [weak]
+  Last modification reported: Thu, 02 Mar 2023 08:06:16 +0000
+  Release file created at: Thu, 02 Mar 2023 14:21:59 +0000
+Reading package lists...
+E: The repository 'cdrom://Ubuntu 20.04.2.0 LTS _Focal Fossa_ - Release amd64 (20210209.1) focal Release' does not have a Release file.
+W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: https://cli.github.com/packages focal InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 23F3D4EA75716059
+W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: https://cli.github.com/packages stable InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 23F3D4EA75716059
+E: The repository 'http://ppa.launchpad.net/vbernat/haproxy-1.7/ubuntu focal Release' does not have a Release file.
+[31m'apt-get update' failed, the script will not install the latest version of apt-transport-https.[0m
+Reading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version (7.68.0-1ubuntu2.16).
+gnupg is already the newest version (2.2.19-3ubuntu2.2).
+apt-transport-https is already the newest version (2.0.9).
+The following package was automatically installed and is no longer required:
+  ubuntu-advantage-desktop-daemon
+Use 'sudo apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 76 not upgraded.
+[34m
+* Installing APT package sources for Datadog
+[0m
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:07 --:--:--     0100  6226  100  6226    0     0    766      0  0:00:08  0:00:08 --:--:--  1204100  6226  100  6226    0     0    766      0  0:00:08  0:00:08 --:--:--  1494
+gpg: key 32637D44F14F620E: "Datadog, Inc. Master key (2020-09-08) <package+masterkey@datadoghq.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100  6226  100  6226    0     0   5509      0  0:00:01  0:00:01 --:--:--  5509
+gpg: key 32637D44F14F620E: "Datadog, Inc. Master key (2020-09-08) <package+masterkey@datadoghq.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  9001  100  9001    0     0  13805      0 --:--:-- --:--:-- --:--:-- 13784
+gpg: key D3A80E30382E94DE: "Datadog, Inc <package@datadoghq.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+[34m
+* Installing the Datadog Agent package
+[0m
+Err:1 https://apt.datadoghq.com stable InRelease
+  Could not resolve 'apt.datadoghq.com'
+Reading package lists...
+W: Failed to fetch https://apt.datadoghq.com/dists/stable/InRelease  Could not resolve 'apt.datadoghq.com'
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+  [33mInstalling package(s): datadog-agent datadog-signing-keys
+[0m
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following package was automatically installed and is no longer required:
+  ubuntu-advantage-desktop-daemon
+Use 'sudo apt autoremove' to remove it.
+The following NEW packages will be installed:
+  datadog-agent datadog-signing-keys
+0 upgraded, 2 newly installed, 0 to remove and 76 not upgraded.
+Need to get 317 MB of archives.
+After this operation, 1,021 MB of additional disk space will be used.
+Err:1 https://apt.datadoghq.com stable/7 amd64 datadog-agent amd64 1:7.43.0-1
+  Could not resolve 'apt.datadoghq.com'
+Ign:2 https://apt.datadoghq.com stable/7 amd64 datadog-signing-keys all 1:1.2.0-1
+Ign:2 https://apt.datadoghq.com stable/7 amd64 datadog-signing-keys all 1:1.2.0-1
+Err:2 https://apt.datadoghq.com stable/7 amd64 datadog-signing-keys all 1:1.2.0-1
+  Could not resolve 'apt.datadoghq.com'
+W: --force-yes is deprecated, use one of the options starting with --allow instead.
+E: Failed to fetch https://apt.datadoghq.com/pool/d/da/datadog-agent_7.43.0-1_amd64.deb  Could not resolve 'apt.datadoghq.com'
+E: Failed to fetch https://apt.datadoghq.com/pool/d/da/datadog-signing-keys_1.2.0-1_all.deb  Could not resolve 'apt.datadoghq.com'
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+[31mERROR
+Failed to install the datadog-agent package, sometimes it may be
+due to another APT source failing. See the logs above to
+determine the cause.
+If the cause is unclear, please contact Datadog support.
+*****
+
+It looks like you hit an issue when trying to install the Datadog Agent.
+
+Troubleshooting and basic usage information for the Datadog Agent are available at:
+
+    https://docs.datadoghq.com/agent/basic_agent_usage/
+[0m
+Do you want to send a failure report to Datadog (including ddagent-install.log)? (y/[n]) Enter an email address so we can follow up: OKA notification has been sent to Datadog with the contents of ddagent-install.log
+
+If you are still having problems, please send an email to support@datadoghq.com
+with the contents of ddagent-install.log and any information you think would be
+useful and we will do our very best to help you solve your problem.
